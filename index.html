@@ -1,100 +1,170 @@
-<!DOCTYPE html>
-
-<html lang="en">
-    <link rel="icon" href="AA.png"
-
+<!doctype html>
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PENTURE PAGE YOUNESS</title>
-
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        nav {
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-around;
-            width:auto;
-            background-color: #4caf50;
-            padding: 10px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px;
-            transition: background-color 0.3s;
-        }
-        nav a:hover {
-            background-color:aquamarine;
-        }
-
-
-
-
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
-        }
-
-        main {
-            max-width: 1100px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        section {
-            margin-bottom: 40px;
-
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>الصباغ - Youness Zaini</title>
+  <link rel="icon" href="AA.png" />
+  <meta name="description" content="خدمات الصباغة المنزلية - Youness Zaini. تواصل معنا للصّباغات الاحترافية والتدريب." />
+  <style>
+    /* خطوط */
+    @font-face{font-family: 'DejaVuSansCustom'; src: local('DejaVu Sans'), local('Arial');}
+    :root{
+      --primary:#0b8a4a; /* أخضر فاخر */
+      --accent:#ffd700;  /* ذهبي */
+      --muted:#657786;
+      --card-bg: #ffffff;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;padding:0;font-family:DejaVuSansCustom, 'Arial', sans-serif;background:linear-gradient(180deg,#fafafa,#f3f7f4);color:#222}
+    header{background:linear-gradient(90deg,var(--primary), #0ea96f);color:white;padding:18px 20px;border-bottom-left-radius:18px;border-bottom-right-radius:18px}
+    .container{max-width:1100px;margin:18px auto;padding:18px}
+    /* Nav */
+    nav{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:56px;height:56px;border-radius:10px;object-fit:cover;border:2px solid rgba(255,255,255,0.15)}
+    .brand h1{font-size:20px;margin:0}
+    .links{display:flex;gap:8px}
+    .links a{background:rgba(255,255,255,0.12);color:#fff;padding:10px 12px;border-radius:10px;text-decoration:none;font-weight:600}
+    .links a:hover{background:rgba(255,255,255,0.25)}
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:center;margin-top:18px}
+    .hero-card{background:var(--card-bg);padding:22px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(10,10,10,0.06)}
+    .hero h2{margin:0 0 8px;font-size:26px;color:#111}
+    .hero p{margin:0 0 14px;color:var(--muted)}
+    .cta{display:inline-block;background:var(--primary);color:#fff;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700}
+    .contact-card{background:linear-gradient(180deg,#fff,#f8fff8);padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(12,80,40,0.06)}
+    .contact-card h3{margin-top:0}
+    .info-list{list-style:none;padding:0;margin:8px 0 0}
+    .info-list li{padding:6px 0;border-bottom:1px dashed #eee}
+    a.action{display:inline-block;margin-top:10px;padding:10px 12px;border-radius:10px;text-decoration:none;font-weight:600}
+    /* Services */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+    .service{background:var(--card-bg);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    .service h4{margin:0 0 8px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:12px}
+    .gallery img{width:100%;height:130px;object-fit:cover;border-radius:10px}
+    footer{margin-top:20px;padding:20px;border-radius:12px;background:#222;color:#fff;text-align:center}
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      .brand h1{font-size:18px}
+    }
+    /* Small accessibility improvements */
+    a:focus{outline:3px solid #ffd700;outline-offset:3px}
+  </style>
 </head>
 <body>
-    <header>
-        <h1>الصباغات العامة المنزلية </h1>
-        <nav>
-            <a href="https://www.facebook.com/younesse.agriculteur?mibextid=ZbWKwL">هنا فيسبوك</a>
-          <a href="https://younessezaini.github.io/peinturage/">كاطالوج</a>
-          <a href="contact.html">مراسلة </a>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <img src="AA.png" alt="logo">
+          <div>
+            <h1>الصباغ — Youness Zaini</h1>
+            <div style="font-size:13px;opacity:0.95">صباغات عامة منزلية و تدريب مهني</div>
+          </div>
+        </div>
+        <div class="links" role="navigation" aria-label="روابط الموقع">
+          <a href="https://www.facebook.com/younesse.agriculteur?mibextid=ZbWKwL" target="_blank">فيسبوك</a>
+          <a href="https://younessezaini.github.io/peinturage/" target="_blank">كاطالوج</a>
+          <a href="contact.html">مراسلة</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-        </nav>
-    </header>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <h2>أهلاً بكم في خدمات الصباغة الاحترافية</h2>
+        <p>نقدّم صباغات داخلية وخارجية، تلميع، تصليح عيوب الجدران، ورشّات تدريب في مجال الصباغة للمبتدئين والمحترفين. نستخدم مواد عالية الجودة ونضمن نتائج أنيقة ومتانة طويلة الأمد.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <a class="cta" href="#contact">تواصل معنا الآن</a>
+          <a class="action" href="#services">خدماتنا</a>
+        </div>
 
-    <main>
-        <CENTER>
-        <section>
-            <h2>Bienvenue sur notre site</h2>
-            <iframe width="100%" height="1000PX" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAEoz-thUMFQwRDZRVThDUDVQUUtZTjc2WkVZSjVXWi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+        <div style="margin-top:18px">
+          <h3 style="margin-bottom:8px">مزايا العمل معنا</h3>
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li>خبرة عملية وتدريب موثوق</li>
+            <li>ألوان وإطلالات فاخرة</li>
+            <li>تسليم في الوقت و احترام المواعيد</li>
+          </ul>
+        </div>
+      </div>
 
-        </section>
-    </CENTER>
-        <!-- Add more sections as needed -->
+      <aside class="contact-card" id="contact">
+        <h3>معلومات الاتصال</h3>
+        <p style="margin:0 0 8px;color:var(--muted)">يسرّك التواصل معنا لأي استفسار أو طلب عرض سعر.</p>
+        <ul class="info-list">
+          <li><strong>الاسم:</strong> Younes Zaini</li>
+          <li><strong>الهاتف:</strong> <a href="tel:+212690919779">+212 690 919 779</a></li>
+          <li><strong>واتساب:</strong> <a href="https://wa.me/212690919779" target="_blank">مراسلة WhatsApp</a></li>
+          <li><strong>البريد الإلكتروني:</strong> <a href="mailto:younessezaini132@gmail.com">younessezaini132@gmail.com</a></li>
+          <li><strong>العنوان:</strong> Al Masalla Al Qadima, Oued Zem, Zenka 17, No. 64</li>
+        </ul>
+        <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+          <a class="action" href="https://www.facebook.com/younesse.agriculteur?mibextid=ZbWKwL" target="_blank">فيسبوك</a>
+          <a class="action" href="contact.html">نموذج مراسلة</a>
+        </div>
+      </aside>
+    </section>
 
+    <section id="services">
+      <h3 style="margin-bottom:8px">خدماتنا</h3>
+      <div class="grid">
+        <div class="service">
+          <h4>صباغات داخلية وخارجية</h4>
+          <p style="margin:0;color:var(--muted)">أعمال طلاء شاملة مع تشطيب عالي الجودة و اختيار ألوان حسب الطلب.</p>
+        </div>
+        <div class="service">
+          <h4>تصليح الجدران وتجهيزها</h4>
+          <p style="margin:0;color:var(--muted)">سد الشقوق، تسوية السطوح، تحضير للطلاء، وإزالة العيوب.</p>
+        </div>
+        <div class="service">
+          <h4>تدرّيب ومورّدات</h4>
+          <p style="margin:0;color:var(--muted)">دورات عملية في الصباغة و توريد مواد مختارة للمشاريع الصغيرة.</p>
+        </div>
+        <div class="service">
+          <h4>تصميم ألوان و استشارات</h4>
+          <p style="margin:0;color:var(--muted)">نساعدك في اختيار لوحة الألوان الأنسب لتجميل مساحتك.</p>
+        </div>
+      </div>
 
-    </main>
+      <div style="margin-top:16px">
+        <h4>معرض أعمال (نموذجي)</h4>
+        <div class="gallery">
+          <img src="https://images.unsplash.com/photo-1545235617-9465a35b6b8b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1" alt="عمل 1">
+          <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=2" alt="عمل 2">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3" alt="عمل 3">
+          <img src="https://images.unsplash.com/photo-1505691723518-36a3d5bf0b2d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=4" alt="عمل 4">
+        </div>
+      </div>
+    </section>
 
-    <footer>
-        &copy; 2024 Your Website Name. All rights reserved.
-    </footer>
+    <section style="margin-top:18px">
+      <h3>نموذج طلب عرض السعر</h3>
+      <p style="margin:0 0 8px;color:var(--muted)">يمكنك تعبئة النموذج التالي لطلب تقدير تقريبي. نرد عليك في أقرب وقت.</p>
+      <div style="background:var(--card-bg);padding:12px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.04)">
+        <!-- Responsive embedded form -->
+        <div style="position:relative;padding-top:56.25%;height:0;overflow:hidden;border-radius:10px">
+          <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAEoz-thUMFQwRDZRVThDUDVQUUtZTjc2WkVZSjVXWi4u&embed=true" frameborder="0" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;flex-direction:column;gap:8px;align-items:center">
+        <div>© 2025 Youness Zaini — الصباغ. جميع الحقوق محفوظة.</div>
+        <small style="opacity:0.8">العنوان: Al Masalla Al Qadima, Oued Zem. هاتف: +212 690 919 779 — البريد الإلكتروني: younessezaini132@gmail.com</small>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
